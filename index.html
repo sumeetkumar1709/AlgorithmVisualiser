@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualiser</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+<body>
+    <navbar>
+        <div class="menu">
+            <div class="heading">Algorithm Visualiser</div>
+            <!-- Add Walls -->
+            <div class="btn-group">
+                <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Add Walls
+                </button>
+                <div class="dropdown-menu">
+                <a class="add-wall dropdown-item">Kruskal's Algorithm</a>
+                <a class="add-wall dropdown-item">Prim's Algorithm</a>
+                <a class="add-wall dropdown-item">Recursive Backtracking</a>
+                </div>
+            </div>
+            <!-- Clear Group -->
+            <div class="btn-group">
+                <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clear
+                </button>
+                <div class="dropdown-menu">
+                <a class="clear dropdown-item">Clear Board</a>
+                <a class="clear dropdown-item">Clear Walls</a>
+                <a class="clear dropdown-item">Clear Path</a>
+                </div>
+            </div>
+            <!--Algorithm Group-->
+            <div class="btn-group">
+                <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Algorithms
+                </button>
+                <div class="dropdown-menu">
+                <a class="algo dropdown-item">Depth-First Search</a>
+                <a class="algo dropdown-item">Breadth-First Search</a>
+                <a class="algo dropdown-item">A*</a>
+                <a class="algo dropdown-item">Dijikstra</a>
+                <a class="algo dropdown-item">Bellman Ford</a>
+                </div>
+            </div>
+        </div>
+        <div class="start-btn" >
+            <button onclick="resolver()" id="choose-algorithm">Choose Algorithm</button>
+        </div>
+    </navbar>
+
+    <info>
+        <div  class="wrapper">
+            <div> 
+                <div class="info-div">
+                    <img class="info-img" src="https://img.icons8.com/ios-filled/50/FFEDD5/chevron-right.png"/>
+                    <p style="color:#FCD824;">Start Node<p>
+                </div>
+                <div class="info-div">
+                    <img class="info-img" src="https://img.icons8.com/ios-filled/50/FA0B44/final-state.png"/>
+                    <p style="color:#FCD824;">End Node<p>
+                </div>
+            </div>
+            <div>
+                <div class="info-div">
+                    <div class="square" style="background:#1F1F1F;"></div>                         
+                    <p style="color:wheat">Empty<p>
+                </div>
+                <div class="info-div">
+                    <div class="square" style="background:#FAEBD7;"></div>                         
+                    <p style="color:wheat">Wall<p>
+                </div>
+            </div>
+            <div>
+                <div class="info-div">
+                    <div class="square" style="background:#bb86fc;"></div>                         
+                    <p style="color:#fff">Visited Node<p>
+                </div>
+                <div class="info-div">
+                    <div class="square" style="background:#8B0000;"></div>                         
+                    <p style="color:#fff">Path<p>
+                </div>
+            </div>
+        </div>
+        <div class="dynamic-wrapper">
+            <div class="slider-wrap">
+               <input type="range" min="0" max="100" value="50" id="myRange">
+                <p id="sliderValue">Change Speed</p> 
+            </div>
+            
+
+            <p class="message" style="color:#fff"></p>
+        </div>
+    </info>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/listeners.js"></script>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/recursiveBacktracking.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

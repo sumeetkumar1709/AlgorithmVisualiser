@@ -1,0 +1,267 @@
+*{
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+a{
+    cursor: pointer;
+    text-decoration:none ;
+    font-size: small !important;
+}
+
+body{
+    background: #121212;
+    margin:0;
+    padding: 0;
+    height: 100vh !important;
+}
+
+navbar{
+    height: 40px;
+    background: #1F1F1F;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    width:80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.menu .heading{
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    letter-spacing: 2px;
+    color:rgb(255, 237, 213 );
+    padding-left: 1.7rem;
+    font-size: small;
+}
+
+.menu .item{
+    color:#BB86FC;
+    cursor:pointer;
+    font-family: sans-serif;
+    font-size: smaller;
+}
+.btn{
+    color:#BB86FC;
+    font-size:smaller;
+}
+.btn:hover{
+    color: #bb86fc !important;
+}
+.btn:focus{
+    box-shadow: none !important;
+}
+.dropdown-menu{
+    background: #2E2E2E !important;
+}
+.dropdown-item{
+    color:rgb(255, 237, 213 ) !important;
+}
+.dropdown-item:hover{
+    color: rgb(120, 53, 15)!important;
+    background-color: rgb(31, 31, 31 )
+}
+
+.start-btn{
+    width: 20%;
+    font-size: smaller;
+    display: flex;
+    justify-content: space-around;
+}
+
+.start-btn button{
+    height: 30px;
+    text-decoration: none;
+    border:1px solid rgb(255, 237, 213 );
+    color:rgb(255, 237, 213 );
+    background: transparent;
+    font-size: smaller;
+    width:50%;
+    border-radius: 5px;
+}
+
+info{
+    height:62px;
+    background: #121212;
+    display: flex;
+    align-items: center;
+}
+.info-div{
+    display: flex;
+    align-items: center;
+}
+.info-img{
+    height:15px;
+    width:15px
+}
+p{
+    margin:0%;
+    padding-left: 10px;
+    font-size: small;
+    letter-spacing: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.message{
+    width:30%;
+}
+.square{
+    height:20px;
+    width:20px;
+    border:1px solid black;
+}
+.table{
+    background: #1F1F1F;
+    border-top: 2px solid #121212 ;
+}
+.wrapper{
+    padding-left: 5%;
+    display:flex;
+    width:50%;
+    justify-content: space-between;
+}
+.dynamic-wrapper{
+    width:50%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+td{
+    height: 10px;
+    width:10px;
+    border:1.5px solid black;
+    padding: 0 !important;
+    cursor: pointer;
+}
+.unvisited:hover{
+    background:aliceblue;
+    transition: all ease-in 100ms;
+}
+
+table{
+    border:none;
+    margin:0px !important;
+}
+
+.wall{
+    animation-name: setWall;
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes setWall{
+    0%{
+        transform: scale(0.3);
+        background:#FAEBD7;
+    }
+    50%{
+        transform:scale(1.4);
+        background: #FAEBD7;
+    }
+    100%{
+        transform:scale(1);
+        background:#FAEBD7;
+    }
+}
+
+.startNode{
+    background-image: url('https://img.icons8.com/ios-filled/50/FFEDD5/chevron-right.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.endNode{
+    background-image: url('https://img.icons8.com/ios-filled/50/FA0B44/final-state.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+
+.curNode{
+    background:
+    #FCD824
+    ;
+    
+}
+.visited{
+    animation-name:setVisited;
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-delay: 0;
+    animation-direction:alternate;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+    animation-play-state:running;
+    background:#BB86FC;
+}
+
+@keyframes setVisited{
+    0%{
+       opacity:0.1;
+    }
+    30%{
+       opacity:0.2;
+    }
+    70%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.path{
+    
+    animation-name:setVisited;
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-delay: 0;
+    animation-direction:alternate;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+    animation-play-state:running;
+    background:#8B0000;
+}
+
+
+input[type="range"] {
+    width: 200px;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+.slider-wrap{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#sliderValue{
+    color:#FAEBD7;
+    font-size: small;
+    letter-spacing: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
